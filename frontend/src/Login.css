@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+/* Login Page Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("C:\Users\HP\Desktop\project\frontend\src\assets\47aa9940-896f-4d2b-b019-86c78e1df493_1200x600.webp");
+}
+
+/* Login Box */
+.login-box {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 30px;
+    border: 2px solid rgba(214, 76, 76, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.login-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+}
+
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Remember Me & Forgot Password */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.remember-me input {
+    margin-right: 8px;
+}
+
+.forgot-password {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    background: #4da6ff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: #008cba;
+}
+
+/* Register Link */
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.register-link a {
+    color: #4da6ff;
+    text-decoration: none;
+}
