@@ -1,0 +1,75 @@
+/* Main content container */
+.content-container {
+    background-color: #000;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  
+  /* Category section (each row) */
+  .category-section {
+    width: 100%;
+    max-width: 1200px; /* Adjusted for better alignment */
+  }
+  
+  /* Title for each category */
+  .category-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6a7fa2;
+    text-align: left;
+    margin-bottom: 15px; /* More space between title and grid */
+    padding-left: 10px; /* Slight left padding for alignment */
+  }
+  
+  /* Grid container for 5 boxes per row */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusts dynamically */
+    gap: 15px; /* Increased gap for proper spacing */
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Individual box */
+  .box {
+    background-color: #333;
+    color: white;
+    height: 160px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* Ensures uniform sizing */
+  }
+  
+  /* Hover effect */
+  .box:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Title below each box */
+  .box-title {
+    position: absolute;
+    bottom: -35px; /* Increased spacing to prevent overlap */
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  

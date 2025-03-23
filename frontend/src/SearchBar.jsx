@@ -5,41 +5,41 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
 import './SearchBar.css';
 
-export default function SearchAppBar() {
+export default function SearchAppBar({ onMenuClick }) { 
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("/"); // Redirects to the login page
+    navigate("/"); 
   };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "rgb(33, 31, 31)" }}> 
         <Toolbar>
-          {/* Menu Icon */}
+          {/* Menu Icon - Calls onMenuClick when clicked */}
           <IconButton
             size="large"
             edge="start"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            onClick={onMenuClick} // Trigger the menu toggle
           >
             <MenuIcon />
           </IconButton>
 
-          {/* Logout Button - Placed next to Menu Icon */}
+          {/* Logout Button */}
           <Button 
             variant="contained" 
             onClick={handleLogout} 
             sx={{ 
               backgroundColor: "rgb(50, 50, 50)", 
               color: "white", 
-              '&:hover': { backgroundColor: "rgb(70, 70, 70)" } // Slight hover effect
+              '&:hover': { backgroundColor: "rgb(70, 70, 70)" } 
             }} 
           >
             Logout
           </Button>
 
-          { }
           <Typography
             variant="h6"
             noWrap
@@ -49,19 +49,13 @@ export default function SearchAppBar() {
             MOVIE RECOMMENDATION
           </Typography>
 
-          {/* Search Bar */}
-          <div className="search">
-            <div className="search-icon-wrapper">
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              className="styled-input-base"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
+
         </Toolbar>
       </AppBar>
     </Box>
   );
 }
+
+
+
+ 
