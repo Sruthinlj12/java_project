@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar.jsx"; 
 import MenuDrawer from "./MenuDrawer.jsx"; 
 import "./Home.css"; 
+import axios from "axios";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -73,11 +74,11 @@ const Home = () => {
     }
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/recommendation", {
+      const response = await axios.post("http://127.0.0.1:5000/recommend", {
         movie: searchQuery,
       });
 
-      navigate("/recommendation", { state: { movies: response.data.recommendation } });
+      navigate("/recommendation", { state: { movies: response.data.recommendations } });
     } catch (error) {
       alert("Movie not found. Please try another title.");
     }

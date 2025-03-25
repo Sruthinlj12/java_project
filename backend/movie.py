@@ -65,7 +65,7 @@ def get_recommendations():
 
     recommendations = recommend(movie_name)
     if not recommendations:
-        return jsonify({'error': 'Movie not found'}), 404
+     return jsonify({'recommendations': []})  # Return an empty list instead of 404 error
 
     return jsonify({'recommendations': recommendations})
 
