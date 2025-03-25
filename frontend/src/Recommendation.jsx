@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-//import "./Recommendation.css";
+import "./Recommendation.css";
 
 const Recommendation = () => {
   const location = useLocation();
@@ -8,18 +8,20 @@ const Recommendation = () => {
   const movies = location.state?.movies || [];
 
   return (
-    <div className="recommendations-container">
+    <div className="recommendations-container" >
       <h2>Recommended Movies</h2>
       {movies.length > 0 ? (
-        <ul>
+        <div className="grid-container">
           {movies.map((movie, index) => (
-            <li key={index}>{movie}</li>
+            <div key={index} className="box">
+              <p className="box-title">{movie}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       ) : (
         <p>No recommendations available.</p>
       )}
-      <button onClick={() => navigate("/")}>Go Back</button>
+      <button onClick={() => navigate("/home")}>Go Back</button>
     </div>
   );
 };
